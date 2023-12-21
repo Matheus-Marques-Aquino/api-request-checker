@@ -1,7 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-router.all('/', async (req, res)=>{
+
+router.get("/", async (req, res) => { 
+    res.sendFile("index.html", { root: "public" });  
+});
+
+router.post('/', async (req, res)=>{
     const {
         body,
         headers,

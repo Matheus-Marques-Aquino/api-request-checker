@@ -29,7 +29,7 @@ process.on('uncaughtException', (err) => {
 app.use(express.json());
 
 app.use('/', indexRoutes);
-app.use('/', datalayerRoutes);
+app.use('/datalayer', datalayerRoutes);
 
 const port = 3040;
 
